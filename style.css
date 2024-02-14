@@ -1,0 +1,124 @@
+
+  body {
+    background-color: ##F9F9F9;
+    font-family: 'Hind Siliguri', sans-serif;
+    background-image: url('backgroundpattern.png');
+    background-repeat: repeat;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar-brand{
+  font-family: 'Playfair Display', serif;
+  padding: 8px 12px ;
+}
+.navbar-brand p{
+  color: #334d00; /* tmavě zelená barva pro nadpisy */
+  font-size: 24px;
+  margin: 0px;
+
+}
+.navbar a, .footer {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: large;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  text-decoration-color: #045e0f; 
+  text-decoration-thickness: 2px; /* Tloušťka podtržení */
+}
+
+.header {
+    background: url('header.jpg') no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+    margin-bottom: 5vh;
+}
+
+.section {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 100%);
+    backdrop-filter: blur(4px);
+    padding: 50px;
+    border-radius: 1.5vh;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin-bottom: 5vh;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #045e0f; /* tmavě zelená barva pro nadpisy */
+    margin-bottom: 1vh;
+}
+
+p {
+    color: #333;
+}
+
+.img-fluid {
+    border-radius: 0.5vw;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+
+/* Přidejte třídu .gold do elementů, které chcete zvýraznit zlatou barvou */
+.gold {
+    color: #d4af37;
+}
+
+/* Příklad použití zelené barvy pro pozadí */
+.green-background {
+    background-color: #045e0f; /* tmavě zelená barva pro pozadí */
+}
+
+/* Přidejte třídu .green do elementů, které chcete zvýraznit tmavě zelenou barvou */
+.green {
+    color: #045e0f;
+}
+
+/* Styly pro formulář */
+.form-control {
+    border-radius: 1vh;
+    width: 50%;
+}
+
+.btn-primary {
+    background-color: #045e0f; /* tmavě zelená barva pro tlačítka */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #d4af37; /* zlatá barva při najetí na tlačítko */
+}
+
+.footer {
+    background-color: #0a4b12;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responzivita obrázků v carousel */
+.carousel-inner img {
+    width: 100%;
+    border-radius: 1.5vh;
+}
+
+.carousel-caption {
+  background-color: #334d0025;
+  border-radius: 0.5vh;
+}
+
+.carousel-caption p{
+  color: white;
+}
+
+
+.footer p{
+  color: white;
+}
