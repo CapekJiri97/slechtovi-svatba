@@ -192,6 +192,22 @@
         $('.navbar-collapse').collapse('hide');
     });
 });
+$(document).ready(function () {
+    // Zavření nabídky po kliknutí na položku nabídky
+    $('.navbar-nav .nav-link').click(function () {
+        $('.navbar-collapse').collapse('hide');
+    });
+
+    // Zavření nabídky po kliknutí na tlačítko hamburger
+    $('.navbar-toggler').click(function () {
+        var navbarCollapse = $('.navbar-collapse');
+        if (navbarCollapse.hasClass('show')) {
+            navbarCollapse.collapse('hide');
+        } else {
+            navbarCollapse.collapse('show');
+        }
+    });
+});
     </script>
     
     </body>
