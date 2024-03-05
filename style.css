@@ -1,21 +1,31 @@
 
-  body {
-    background-color: ##F9F9F9;
+body {
+    background-color: #F9F9F9 ;
     font-family: 'Hind Siliguri', sans-serif;
     background-image: url('backgroundpattern.png');
     background-repeat: repeat;
+}
+
+p{
+    font-size: 18px;
+}
+
+#den_png{
+    justify-content: center;
 }
 
 .navbar {
     background-color: #333;
 }
 
+
+
 .navbar-brand{
   font-family: 'Playfair Display', serif;
   padding: 8px 12px ;
 }
 .navbar-brand p{
-  color: #334d00; /* tmavě zelená barva pro nadpisy */
+  color:  #6c94b9; ; 
   font-size: 24px;
   margin: 0px;
 
@@ -30,7 +40,7 @@
 
 .navbar a:hover {
   text-decoration: underline;
-  text-decoration-color: #045e0f; 
+  text-decoration-color:  #8C9DAD; ; 
   text-decoration-thickness: 2px; /* Tloušťka podtržení */
 }
 
@@ -40,6 +50,13 @@
     height: 90vh;
     margin-bottom: 5vh;
 }
+.section_center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
 
 .section {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 100%);
@@ -50,9 +67,15 @@
     margin-bottom: 5vh;
 }
 
+
+#den{
+    width: fit-content;
+    
+}
+
 h2 {
     font-family: 'Playfair Display', serif;
-    color: #045e0f; /* tmavě zelená barva pro nadpisy */
+    color: #8C9DAD; 
     margin-bottom: 1vh;
 }
 
@@ -66,19 +89,19 @@ p {
 }
 
 
-/* Přidejte třídu .gold do elementů, které chcete zvýraznit zlatou barvou */
+
 .gold {
     color: #d4af37;
 }
 
 /* Příklad použití zelené barvy pro pozadí */
 .green-background {
-    background-color: #045e0f; /* tmavě zelená barva pro pozadí */
+    background-color: #8C9DAD; ; 
 }
 
 /* Přidejte třídu .green do elementů, které chcete zvýraznit tmavě zelenou barvou */
 .green {
-    color: #045e0f;
+    color:  #8C9DAD; ;
 }
 
 /* Styly pro formulář */
@@ -88,7 +111,7 @@ p {
 }
 
 .btn-primary {
-    background-color: #045e0f; /* tmavě zelená barva pro tlačítka */
+    background-color:  #8C9DAD; ; /* tmavě zelená barva pro tlačítka */
     border: none;
 }
 
@@ -97,7 +120,7 @@ p {
 }
 
 .footer {
-    background-color: #0a4b12;
+    background-color:  #8C9DAD; 
     color: white;
     padding: 20px 0;
     text-align: center;
