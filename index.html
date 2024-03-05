@@ -50,6 +50,13 @@
   </div>
 </nav>
 
+
+<!-- Progress bar container -->
+<div class="progress-container">
+  <div class="progress-bar" id="myBar"></div>
+</div>
+
+
 <!-- Header -->
 <div class="header" id="home"></div>
 
@@ -204,31 +211,39 @@ Martin Vokálek – svědek ženicha (728 264 134) <br>
     <script>
 $(document).ready(function(){
     $('#momentsCarousel').carousel({
-      interval: 5000 // Obrázky se budou přepínat každých 5 sekund
+        interval: 3000 // Obrázky se budou přepínat každých 3 sekundy, ne 5
     });
 
-    // Zavření nabídky po kliknutí na položku nabídky nebo tlačítko hamburger
-    $('.navbar-nav .nav-link, .navbar-toggler').click(function () {
+    // Tlačítko pro otevření/zavření menu
+    $('.navbar-toggler').click(function(event) {
+        event.stopPropagation(); // Zastaví šíření události, aby nedošlo k následnému spuštění $(document).click()
         var navbarCollapse = $('.navbar-collapse');
-        if (navbarCollapse.hasClass('show')) {
-            navbarCollapse.collapse('hide');
-        } else if ($(this).hasClass('navbar-toggler')) {
-            navbarCollapse.collapse('show');
+        navbarCollapse.collapse('toggle');
+    });
+
+    // Zavření menu po kliknutí mimo menu
+    $(document).click(function(event) {
+        var openNavbar = $('.navbar-collapse.collapse.show');
+        if(openNavbar.length > 0 && !$(event.target).closest('.navbar').length) {
+            openNavbar.collapse('hide');
         }
     });
 
-    // Zavření nabídky při kliknutí mimo menu
-    $(document).click(function (event) {
-        var clickover = $(event.target);
-        var navbarCollapse = $('.navbar-collapse');
-        var navbarTogglerIsVisible = $('.navbar-toggler').is(':visible');
-        var clickedOnNavbar = clickover.closest('.navbar').length > 0;
-
-        if (navbarCollapse.hasClass('show') && navbarTogglerIsVisible && !clickedOnNavbar) {
-            $('.navbar-toggler').trigger('click'); // Simuluje kliknutí na tlačítko pro skrytí nabídky
-        }
+    // Zavření menu po kliknutí na položku menu (v mobilním zobrazení)
+    $('.navbar-nav .nav-link').click(function(event) {
+        event.stopPropagation(); // To samé zde, aby nedošlo ke konfliktu s $(document).click()
+        $('.navbar-collapse').collapse('hide');
     });
 });
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
 
 
     </script>
