@@ -104,7 +104,7 @@
 
   </div>  
 
-  <!-- Potvrzení účasti Section -->
+  <!-- Potvrzení účasti Section 
   <div class="section" id="ucast">
     <h2>Potvrzení účasti</h2>
     <form action="mailto:svorlyqq@seznam.cz" method="post" enctype="text/plain">
@@ -130,31 +130,115 @@
         </form>
       </div>
     </div>
+-->
+<div class="section" id="ucast" style="display: flex;">
+  <!-- Část formuláře -->
+  <div style="flex: 1; padding: 10px;">
+    <h2>Potvrzení účasti</h2>
+   <!-- <form action="mailto:svorlyqq@seznam.cz" method="post" enctype="text/plain"> -->
+      <div class="form-group">
+        <label for="name">Jméno a příjmení:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="attendance">Účast:</label>
+        <select class="form-control" id="attendance" name="attendance">
+          <option value="yes">Přijdu</option>
+          <option value="no">Nepřijdu</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="number">Počet osob:</label>
+        <input type="number" class="form-control" id="number" name="number" required>
+      </div>
+      <div class="form-group">
+        <label for="meal">Jídlo:</label>
+        <input type="text" class="form-control" id="meal" name="meal" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Odeslat</button>
+    </form>
+  </div>
+
+  <!-- Část s checkboxy a jmény -->
+  <div style="flex: 1; padding: 10px; overflow-y: auto;">
+    <h2>Výběr jména</h2>
+    <div id="nameList" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
+  </div>
+</div>
 
   <!-- Důležité momenty Section -->
   <div class="section" id="moment">
     <h2>Důležité momenty</h2>
     <div id="momentsCarousel" class="carousel slide" data-ride="carousel">
+
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="moment1.png" class="d-block w-100" alt="Moment 1">
+          <img src="dovolena.png" class="d-block w-100" alt="Moment 1">
           <div class="carousel-caption d-none d-md-block">
-            <p>Založení společného Revolutu</p>
+            <p>První dovolená v Jugoslávii – červenec, 2019</p>
+          </div>
+        </div>
+   
+
+        <div class="carousel-item">
+          <img src="ucet.png" class="d-block w-100" alt="Moment 2">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Založení společného účtu a správa financí – červenec, 2021</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="pohoda.png" class="d-block w-100" alt="Moment 2">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Pohoda na Azorech – červenec, 2021</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="cesta.png" class="d-block w-100" alt="Moment 2">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Hledání společné cesty životem – prosinec, 2021</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="nepal.png" class="d-block w-100" alt="Moment 2">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Češi v Nepálu – červenec, 2022</p>
+          </div>
+        </div>
+
+        
+        <div class="carousel-item">
+          <img src="dolomity.png" class="d-block w-100" alt="Moment 2">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Běžkování v Dolomitech – březen, 2023</p>
+          </div>
+        </div>
+
+             
+        <div class="carousel-item">
+          <img src="oblek.png" class="d-block w-100" alt="Moment 2">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Koupě svatebního obleku pro ženicha – srpen, 2023</p>
+          </div>
+        </div>
+             
+        <div class="carousel-item">
+          <img src="zadost.png" class="d-block w-100" alt="Moment 2">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Áďi 23. narozeniny a mimochodem žádost o ruku – srpen, 2023</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="moment2.jpg" class="d-block w-100" alt="Moment 2">
+          <img src="saty.png" class="d-block w-100" alt="Moment 2">
           <div class="carousel-caption d-none d-md-block">
-            <p>Koupě společného auta</p>
+            <p>     Svatební šaty pro nevěstu – únor, 2024</p>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="moment3.jpg" class="d-block w-100" alt="Moment 2">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Nastěhování klavíru od Čapků</p>
-          </div>
-        </div>
-        <!-- Add more items here -->
+
+
+      
 
       </div>
       <a class="carousel-control-prev" href="#momentsCarousel" role="button" data-slide="prev">
@@ -181,7 +265,7 @@
     </div>
   </div>
     
-  <!-- Kontakty Section -->
+  <!-- Kontakty Section 
   <div class="section" id="kontakty">
     <h2>Kontakty</h2>
     <p>
@@ -195,6 +279,37 @@ Martin Vokálek – svědek ženicha (728 264 134) <br>
 
     </p>
   </div>
+-->
+  <div class="important-people-section">
+    <h2>Kontakty</h2>
+    <p> V případě jakýchkoliv dotazů volejte nebo pište. V den svatby prosím kontaktujte svědky. </p>
+    <div class="person">
+      <img src="ada.png">
+      <h3>Adéla Velková</h3>
+      <p>Nevěsta</p>
+      <p>721 863 651</p>
+    </div>
+
+     <div class="person">
+      <img src="rada.png">
+      <h3>Radek Šlechta</h3>
+      <p>Ženich</p>
+      <p>737 56 55 66</p>
+    </div>
+    <div class="person">
+      <img src="bara.png">
+      <h3>Bára Velková</h3>
+      <p>Svědkyně nevěsty</p>
+      <p>722 926 335</p>
+    </div>
+    <div class="person">
+      <img src="martin.jpg">
+      <h3>Martin Vokálek</h3>
+      <p>Svědek ženicha </p>
+      <p>728 264 134</p>
+    </div>
+  </div>
+  
     
     </div>
 </div>
@@ -246,7 +361,33 @@ function myFunction() {
 }
 
 
+
+
+/* formular jmena */
+document.addEventListener("DOMContentLoaded", function() {
+  const names = ["Adam Karel", "Barbora Sára", "Cyril Josef", "Dana Eva", "Eduard Jiří", "Františka Marie", "Gabriel Anna", "Helena Petr", "Ivan Lucie", "Jitka Michal", "Karel Václav", "Ludmila Tereza", "Martin David", "Nela Ema", "Ondřej Jakub", "Pavlína Veronika", "Quido Jan", "Rostislav Kamil", "Sára Karolína", "Tomáš Jana", "Ursula Libor", "Viktor Daniel", "Wilma Nikola", "Xenia Robert", "Yvonne Patrik", "Zbyněk Šimon", "Albert Renata", "Beáta Miloš", "Ctirad Radek", "Daniela Stanislav", "Emil Vojtěch", "Filip Lenka", "Gustav Dominik", "Hana Oldřich", "Igor Kristýna", "Julie Oliver", "Klára Marek", "Luboš Andrea", "Monika Lukáš", "Norbert Simona"];
+  const nameListDiv = document.getElementById("nameList");
+  names.forEach(function(name, index) {
+    const checkboxId = `name-${index}`;
+    const checkbox = `<div>
+      <input type="checkbox" id="${checkboxId}" name="names" value="${name}" onclick="updateSelectedNames()">
+      <label for="${checkboxId}">${name}</label>
+    </div>`;
+    nameListDiv.innerHTML += checkbox;
+  });
+});
+
+function updateSelectedNames() {
+  const selectedNames = [];
+  document.querySelectorAll('#nameList input[type="checkbox"]:checked').forEach(function(checkbox) {
+    selectedNames.push(checkbox.value);
+  });
+  document.getElementById("name").value = selectedNames.join(", ");
+}
+
+
     </script>
+    
     
     </body>
     </html>
