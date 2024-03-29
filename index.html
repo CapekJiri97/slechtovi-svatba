@@ -71,7 +71,7 @@
         <img src="map1.png" alt="Mapa 1" class="img-fluid">
       </div>
       <div class="col-lg-6 order-lg-2">
-        <p>Obřad proběhne v kostele sv. Jana Křtitele v Květově (Květov 21, 399 01). Počet parkovacích míst před kostelem je omezený, nejezděte prosím každý sám a domluvte se po skupinách. Přijeďte prosím včas, minimálně 30 minut před začátkem obřadu. Po obřadu proběhnou gratulace a krátké společné focení. </p>
+        <p>Obřad proběhne v kostele sv. Jana Křtitele v Květově (Květov 21, 399 01). Počet parkovacích míst před kostelem je omezený, nejezděte prosím každý sám a domluvte se po skupinách.</p>
       </div>
     </div>
     <div class="row align-items-center mt-4">
@@ -79,7 +79,7 @@
         <img src="map2.png" alt="Mapa 2" class="img-fluid">
       </div>
       <div class="col-lg-6 order-lg-1">
-        <p>Po obřadu se přesuneme na statek do Jickovic (Jickovice 58, 399 01), kde bude probíhat zbytek svatebního dne. Parkování zde je zajištěno pro všechny.</p>
+        <p>Hodinu před začátkem obřadu nazdobíme auta a pojedeme společně z Jickovic do kostela. Pokud nebudete stíhat, přijeďte prosím rovnou do kostela, minimálně 30 minut před začátkem obřadu. Po obřadu proběhnou gratulace a krátké společné focení.</p>
       </div>
     </div>
   </div>
@@ -98,7 +98,7 @@
   </div>
   
   <!-- Ubytování Section -->
-  <div class="section" id="kontakty">
+  <div class="section">
     <h2>Ubytování</h2>
     <p>Ubytování je zařízeno pouze pro rodinu. Svatebčané mají možnost přespání na přilehlé zahradě ve stanech. Kdo nebude chtít přespat, může využít svatební taxi, které bude k dispozici celý večer. </p>
 
@@ -131,40 +131,56 @@
       </div>
     </div>
 -->
+
+
 <div class="section" id="ucast" style="display: flex;">
   <!-- Část formuláře -->
-  <div style="flex: 1; padding: 10px;">
-    <h2>Potvrzení účasti</h2>
-   <!-- <form action="mailto:svorlyqq@seznam.cz" method="post" enctype="text/plain"> -->
-      <div class="form-group">
-        <label for="name">Jméno a příjmení:</label>
-        <input type="text" class="form-control" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="attendance">Účast:</label>
-        <select class="form-control" id="attendance" name="attendance">
-          <option value="yes">Přijdu</option>
-          <option value="no">Nepřijdu</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="number">Počet osob:</label>
-        <input type="number" class="form-control" id="number" name="number" required>
-      </div>
-      <div class="form-group">
-        <label for="meal">Jídlo:</label>
-        <input type="text" class="form-control" id="meal" name="meal" required>
-      </div>
+    <div style="flex: 1; padding: 10px;">
+      <h2>Potvrzení účasti</h2>
+    <!-- <form action="mailto:svorlyqq@seznam.cz" method="post" enctype="text/plain"> -->
+        <div class="form-group">
+          <label for="name">Jméno a příjmení:</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="attendance">Účast:</label>
+          <select class="form-control" id="attendance" name="attendance">
+            <option value="yes">Přijdu</option>
+            <option value="no">Nepřijdu</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="meal">Stravovací omezení:</label>
+          <input type="text" class="form-control" id="meal" name="meal" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nightride">Večerní svoz:</label>
+            <select class="form-control" id="attendance" name="attendance">
+              <option value="yes">Plánuji využít</option>
+              <option value="no">Neplánuji využít</option> 
+            </select>
+        </div>
+
       <button type="submit" class="btn btn-primary">Odeslat</button>
-    </form>
+   
   </div>
 
-  <!-- Část s checkboxy a jmény -->
-  <div style="flex: 1; padding: 10px; overflow-y: auto;">
-    <h2>Výběr jména</h2>
-    <div id="nameList" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
+
+    <!-- Část s checkboxy a jmény -->
+    <div style="flex: 1; padding: 10px;">
+      <h2>Výběr jména</h2>
+      <button id="showNames" class="btn btn-info">Zobrazit nabídku jmen</button>
+      <button id="hideNames" class="btn btn-warning" style="display:none;">Schovat nabídku jmen</button>
+      <div id="nameList" style="display: none; grid-template-columns: repeat(3, 1fr); gap: 10px; display: none;"></div>
+    </div>
   </div>
-</div>
+
+
+
+
 
   <!-- Důležité momenty Section -->
   <div class="section" id="moment">
@@ -254,13 +270,12 @@
 
   <!-- Dress Code Section -->
   <div class="section" id="dresscode">
-    <h2>Dress Code</h2>
+    <h2>Svatbení etiketa:</h2>
     <div class="row">
       <div class="col-md-6">
-        <img src="dresscode.jpg" alt="Dress Code" class="img-fluid">
-      </div>
-      <div class="col-md-6">
-        <p>Informace o dress code...</p>
+        <p>Dámy, vyberte si šaty, ve kterých se budete cítit pohodlně a zároveň elegantně. Pánové sáhněte po tmavším obleku, než je oblek ženicha a košili světlejších barev. 
+          Během obřadu prosím vypněte své mobilní telefony a nefotografujte. Vše zaznamená náš fotograf.
+        </p>
       </div>
     </div>
   </div>
@@ -280,9 +295,19 @@ Martin Vokálek – svědek ženicha (728 264 134) <br>
     </p>
   </div>
 -->
-  <div class="important-people-section">
-    <h2>Kontakty</h2>
+
+  <div class="important-people-section" id="kontakty">
+    <h2>Kontakty </h2>
     <p> V případě jakýchkoliv dotazů volejte nebo pište. V den svatby prosím kontaktujte svědky. </p>
+
+    <div class="person">
+      <img src="martin.png">
+      <h3>Martin Vokálek</h3>
+      <p>Svědek ženicha </p>
+      <p>728 264 134</p>
+    </div>
+
+    
     <div class="person">
       <img src="ada.png">
       <h3>Adéla Velková</h3>
@@ -296,18 +321,16 @@ Martin Vokálek – svědek ženicha (728 264 134) <br>
       <p>Ženich</p>
       <p>737 56 55 66</p>
     </div>
+
     <div class="person">
       <img src="bara.jpg">
       <h3>Bára Velková</h3>
       <p>Svědkyně nevěsty</p>
       <p>722 926 335</p>
     </div>
-    <div class="person">
-      <img src="martin.jpg">
-      <h3>Martin Vokálek</h3>
-      <p>Svědek ženicha </p>
-      <p>728 264 134</p>
-    </div>
+
+   
+
   </div>
   
     
@@ -363,10 +386,23 @@ function myFunction() {
 
 
 
-/* formular jmena */
+/* formular jmena 
 document.addEventListener("DOMContentLoaded", function() {
-  const names = ["Adam Karel", "Barbora Sára", "Cyril Josef", "Dana Eva", "Eduard Jiří", "Františka Marie", "Gabriel Anna", "Helena Petr", "Ivan Lucie", "Jitka Michal", "Karel Václav", "Ludmila Tereza", "Martin David", "Nela Ema", "Ondřej Jakub", "Pavlína Veronika", "Quido Jan", "Rostislav Kamil", "Sára Karolína", "Tomáš Jana", "Ursula Libor", "Viktor Daniel", "Wilma Nikola", "Xenia Robert", "Yvonne Patrik", "Zbyněk Šimon", "Albert Renata", "Beáta Miloš", "Ctirad Radek", "Daniela Stanislav", "Emil Vojtěch", "Filip Lenka", "Gustav Dominik", "Hana Oldřich", "Igor Kristýna", "Julie Oliver", "Klára Marek", "Luboš Andrea", "Monika Lukáš", "Norbert Simona"];
-  const nameListDiv = document.getElementById("nameList");
+  const names = [
+  "Petra Šlechtová", "Zdeněk Šlechta", "Andrea Matějková", "Milan Matějka", "Marie Matějková", "Anna Matějková", "Magda Brůžková", "Pavel Brůžek",
+  "Vít Brůžek", "Klára Brůžková", "Margarita Šlechta", "Petr Šlechta st.", "Lucie Šlechtová", "Marek Vojáček", "Eva Ďurišová", "Štěpán Vojáček",
+  "Ondřej Vojáček", "Matěj Vojáček", "Martin Vokálek", "Karolína Novotná", "Marek Vondřich", "Eliška Remešová", "Petr Procházka", "Kamila Menšíková",
+  "Jiří Maňák", "Karolína Halířová", "Martin Štverák", "Patrik Výkruta", "Alexandra Merglová", "Šimon Fibír", "Eva Fibírová", "Ondřej Vilímek",
+  "Veronika Vilímková", "Petr Maňák", "Dalibor Fait", "Adéla Maříková", "Matěj Brožka", "Miroslav Navara", "Jakub Šedivý", "Ondřej Sikora",
+  "Ladislav Váňa", "Lukáš Tóth", "Karolína Tóthová", "Radek Duda", "Adéla Štěpánová", "Ondřej Musil", "Adéla Prokopiusová", "Tomáš Jirsa",
+  "Zdeněk Blažek", "Markéta Velková", "David Velek", "Bára Velková", "Baryk + 1", "Ludmila Velková", "Jaromír Velek", "Vlastimil Štýbnar",
+  "Jaroslav Zdráhal", "Zdenka Frankovičová", "Jan Frankovič st.", "Jan Frankovič ml.", "Mája Frankovičová", "Jitka Odstrčilová", "Tomáš Sehnal",
+  "Adéla Janků", "Misha Daling", "Kristýna Klárová", "Jan Vaňous", "Anna Dolejší", "Lenka Nguyenová Xuanová", "Tereza Indráková", "Miroslav Indrák",
+  "Bertík Indrák", "Lucie Preslová", "Martin Souček", "Regina Kržová", "Agáta Bicanová", "Milan Koc", "Michaela Boorová", "Radim Krátký",
+  "Jana Chlupová", "Dan Vrba"
+];
+
+ const nameListDiv = document.getElementById("nameList");
   names.forEach(function(name, index) {
     const checkboxId = `name-${index}`;
     const checkbox = `<div>
@@ -377,13 +413,77 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+*/
+
+
 function updateSelectedNames() {
-  const selectedNames = [];
-  document.querySelectorAll('#nameList input[type="checkbox"]:checked').forEach(function(checkbox) {
+  // Získá všechny zaškrtnuté checkboxy v `#nameList`
+  var checkedBoxes = document.querySelectorAll('#nameList input[type="checkbox"]:checked');
+  var selectedNames = [];
+
+  // Prochází všechny zaškrtnuté checkboxy a přidává jejich hodnoty (jména) do pole
+  checkedBoxes.forEach(function(checkbox) {
     selectedNames.push(checkbox.value);
   });
-  document.getElementById("name").value = selectedNames.join(", ");
+
+  // Spojí všechna vybraná jména do řetězce odděleného čárkami a aktualizuje hodnotu v textovém poli
+  document.getElementById('name').value = selectedNames.join(', ');
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Kód pro generování checkboxů
+  const names = [
+  "Petra Šlechtová", "Zdeněk Šlechta", "Andrea Matějková", "Milan Matějka", "Marie Matějková", "Anna Matějková", "Magda Brůžková", "Pavel Brůžek",
+  "Vít Brůžek", "Klára Brůžková", "Margarita Šlechta", "Petr Šlechta st.", "Lucie Šlechtová", "Marek Vojáček", "Eva Ďurišová", "Štěpán Vojáček",
+  "Ondřej Vojáček", "Matěj Vojáček", "Martin Vokálek", "Karolína Novotná", "Marek Vondřich", "Eliška Remešová", "Petr Procházka", "Kamila Menšíková",
+  "Jiří Maňák", "Karolína Halířová", "Martin Štverák", "Patrik Výkruta", "Alexandra Merglová", "Šimon Fibír", "Eva Fibírová", "Ondřej Vilímek",
+  "Veronika Vilímková", "Petr Maňák", "Dalibor Fait", "Adéla Maříková", "Matěj Brožka", "Miroslav Navara", "Jakub Šedivý", "Ondřej Sikora",
+  "Ladislav Váňa", "Lukáš Tóth", "Karolína Tóthová", "Radek Duda", "Adéla Štěpánová", "Ondřej Musil", "Adéla Prokopiusová", "Tomáš Jirsa",
+  "Zdeněk Blažek", "Markéta Velková", "David Velek", "Bára Velková", "Baryk + 1", "Ludmila Velková", "Jaromír Velek", "Vlastimil Štýbnar",
+  "Jaroslav Zdráhal", "Zdenka Frankovičová", "Jan Frankovič st.", "Jan Frankovič ml.", "Mája Frankovičová", "Jitka Odstrčilová", "Tomáš Sehnal",
+  "Adéla Janků", "Misha Daling", "Kristýna Klárová", "Jan Vaňous", "Anna Dolejší", "Lenka Nguyenová Xuanová", "Tereza Indráková", "Miroslav Indrák",
+  "Bertík Indrák", "Lucie Preslová", "Martin Souček", "Regina Kržová", "Agáta Bicanová", "Milan Koc", "Michaela Boorová", "Radim Krátký",
+  "Jana Chlupová", "Dan Vrba"
+]; // Vaše jména
+  
+  const nameListDiv = document.getElementById("nameList");
+  names.forEach(function(name, index) {
+    const checkboxId = `name-${index}`;
+    const checkbox = `<div>
+      <input type="checkbox" id="${checkboxId}" name="names" value="${name}">
+      <label for="${checkboxId}">${name}</label>
+    </div>`;
+    nameListDiv.innerHTML += checkbox;
+  });
+
+  // Přidává posluchače událostí ke všem checkboxům po jejich vytvoření
+  nameListDiv.addEventListener('change', function(e) {
+    if(e.target.type === 'checkbox') {
+      updateSelectedNames();
+    }
+  });
+});
+
+
+$(document).ready(function(){
+    // Ostatní JavaScript kód
+
+    // Tlačítko pro zobrazení jmén
+    $('#showNames').click(function() {
+        $('#nameList').css('display', 'grid'); // Použít display: grid pro zobrazení v grid layoutu
+        $('#showNames').hide();
+        $('#hideNames').show();
+    });
+
+    // Tlačítko pro skrytí jmén
+    $('#hideNames').click(function() {
+        $('#nameList').css('display', 'none'); // Skrýt seznam jmén
+        $('#showNames').show();
+        $('#hideNames').hide();
+    });
+});
+
+
 
 
     </script>

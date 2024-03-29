@@ -45,7 +45,7 @@ p{
 }
 
 .header {
-    background: url('uvodka.jpg') no-repeat center center;
+    background: url('uvodka.jpeg') no-repeat center center;
     background-size: cover;
     height: 90vh;
     margin-bottom: 5vh;
@@ -57,6 +57,17 @@ p{
 }
 
 
+
+.btn-info{
+    background-color:#8C9DAD;
+    border: none;
+    
+}
+
+.btn-warning{
+    background-color:#d4af37;
+    border: none;
+}
 
 .section {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 100%);
