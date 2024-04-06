@@ -158,13 +158,13 @@
 
         <div class="form-group">
             <label for="nightride">Večerní svoz:</label>
-            <select class="form-control" id="attendance" name="attendance">
+            <select class="form-control" id="nightride" name="attendance">
               <option value="yes">Plánuji využít</option>
               <option value="no">Neplánuji využít</option> 
             </select>
         </div>
 
-      <button type="submit" class="btn btn-primary">Odeslat</button>
+      <button type="submit" class="btn btn-primary" id="btn_submit" >Odeslat</button>
    
   </div>
 
@@ -464,6 +464,26 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+// EXPREGOVO SCRIPT
+function handleSubmitButton(){
+		    var name_element = document.getElementById("name");
+		    var to_send = name_element.value;
+		    var attendance = document.getElementById("attendance");
+		    to_send += ";" + attendance.value;
+		    var meal = document.getElementById("meal");
+		    to_send += ";" + meal.value;
+		    var nightride = document.getElementById("nightride");
+		    to_send += ";" + nightride.value;
+
+		// send to the server
+		const xhr = new XMLHttpRequest();
+		xhr.open("POST", "/confirm.php");
+		xhr.setRequestHeader("Content-Type", "application/json");
+		xhr.send(to_send);
+
+	    }
+var submit_button = document.getElementById("btn_submit");
+submit_button.onclick = handleSubmitButton;
 
 $(document).ready(function(){
     // Ostatní JavaScript kód
